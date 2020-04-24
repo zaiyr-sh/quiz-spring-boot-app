@@ -1,25 +1,11 @@
 package kg.webproject.quiz.ui.models.response;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import java.util.List;
+import java.util.Set;
 
 public class QuestionResponseModel {
 
-    @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
-    private Long id;
     private String questionContent;
-    private List<AnswerResponseModel> answerResponseModels;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
+    private Set<AnswerResponseModel> answerResponseModels; // set for unique values
 
     public String getQuestionContent() {
         return questionContent;
@@ -29,11 +15,11 @@ public class QuestionResponseModel {
         this.questionContent = questionContent;
     }
 
-    public List<AnswerResponseModel> getAnswerResponseModels() {
+    public Set<AnswerResponseModel> getAnswerResponseModels() {
         return answerResponseModels;
     }
 
-    public void setAnswerResponseModels(List<AnswerResponseModel> answerResponseModels) {
+    public void setAnswerResponseModels(Set<AnswerResponseModel> answerResponseModels) {
         this.answerResponseModels = answerResponseModels;
     }
 }

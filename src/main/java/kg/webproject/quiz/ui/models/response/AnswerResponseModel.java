@@ -1,22 +1,16 @@
 package kg.webproject.quiz.ui.models.response;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
 public class AnswerResponseModel {
 
-    @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
-    private Long id;
+    private String id;
     private String answerContent;
     private boolean correct;
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
