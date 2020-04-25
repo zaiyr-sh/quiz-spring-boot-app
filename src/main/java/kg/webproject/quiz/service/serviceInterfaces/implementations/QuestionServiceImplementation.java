@@ -5,6 +5,7 @@ import kg.webproject.quiz.io.repositories.QuestionRepository;
 import kg.webproject.quiz.service.serviceInterfaces.QuestionService;
 import kg.webproject.quiz.shared.dto.AnswerDto;
 import kg.webproject.quiz.shared.dto.QuestionDto;
+import kg.webproject.quiz.ui.models.response.QuestionResponseModel;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
@@ -54,6 +55,10 @@ public class QuestionServiceImplementation implements QuestionService {
     @Override
     public QuestionDto updateQuestion(long Id, QuestionDto question) {
         return null;
+//        QuestionDto questionUpdate = modelMapper.map(question, QuestionDto.class);
+//
+//        return modelMapper.map(_questionRepository.findByQuestionContent(
+//                questionUpdate, Id), QuestionResponseModel.class);
     }
 
     @Override
