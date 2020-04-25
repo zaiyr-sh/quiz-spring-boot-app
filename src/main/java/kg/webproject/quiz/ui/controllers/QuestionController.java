@@ -16,7 +16,6 @@ import java.util.Set;
 
 @RestController
 @RequestMapping("questions")
-@CrossOrigin
 public class QuestionController {
 
     @Autowired
@@ -24,6 +23,7 @@ public class QuestionController {
 
     private ModelMapper modelMapper = new ModelMapper();
 
+    @CrossOrigin
     @PostMapping
     @ApiOperation(value = "addQuestion")
     public QuestionResponseModel addQuestion(@RequestBody QuestionRequestModel question){
@@ -33,12 +33,15 @@ public class QuestionController {
         return modelMapper.map(questionService.createQuestion(questionDto), QuestionResponseModel.class);
 
     }
+
+    @CrossOrigin
     @GetMapping(path = "/{id}")
     @ApiOperation(value = "getQuestion")
     public QuestionResponseModel getQuestion(@PathVariable long id){
         return modelMapper.map(questionService.getQuestionById(id), QuestionResponseModel.class);
     }
 
+    @CrossOrigin
     @GetMapping
     @ApiOperation(value = "getAllQuestions")
     public Set<QuestionResponseModel> getAllQuestions(){
@@ -51,6 +54,7 @@ public class QuestionController {
         return returnValue;
     }
 
+    @CrossOrigin
     @DeleteMapping(path = "/{id}")
     @ApiOperation(value = "deleteQuestion")
     public String deleteQuestion(@PathVariable long id){
@@ -60,6 +64,7 @@ public class QuestionController {
 
     }
 
+    @CrossOrigin
     @PutMapping(path = "/{id}")
     @ApiOperation(value = "addAnswerToQuestion")
     public QuestionResponseModel addAnswerToQuestion(@PathVariable long id, @RequestBody AnswerRequestModel answer){
