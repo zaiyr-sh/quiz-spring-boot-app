@@ -5,7 +5,7 @@ import java.util.Set;
 public class QuestionResponseModel {
 
     private String questionContent;
-    private Set<AnswerResponseModel> answerResponseModels; // set for unique values
+    private Set<AnswerResponseModel> answers; // set for unique values
 
     public String getQuestionContent() {
         return questionContent;
@@ -15,11 +15,11 @@ public class QuestionResponseModel {
         this.questionContent = questionContent;
     }
 
-    public Set<AnswerResponseModel> getAnswerResponseModels() {
-        return answerResponseModels;
+    public Set<AnswerResponseModel> getAnswers() {
+        return answers;
     }
 
-    public void setAnswerResponseModels(Set<AnswerResponseModel> answerResponseModels) {
-        this.answerResponseModels = answerResponseModels;
+    public void setAnswers(Set<AnswerResponseModel> answers) {
+        this.answers = answers;
     }
 }

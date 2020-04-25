@@ -5,8 +5,8 @@ import java.io.Serializable;
 import java.util.Set;
 
 @Entity(name="questions")
-public class Question implements Serializable {     //for persisting an object from memory to a sequence of bits
-    private static final long serialVersionUID = 3599305611574853751L;
+public class QuestionEntity implements Serializable {     //for persisting an object from memory to a sequence of bits
+    private static final long serialVersionUID = -4664052149941848167L;
 
     @Id
     @GeneratedValue
@@ -16,7 +16,7 @@ public class Question implements Serializable {     //for persisting an object f
     private String questionContent;
 
     @OneToMany(mappedBy = "question", cascade = CascadeType.ALL)
-    private Set<Answer> answers;
+    private Set<AnswerEntity> answers;
 
     public long getId() {
         return id;
@@ -34,11 +34,11 @@ public class Question implements Serializable {     //for persisting an object f
         this.questionContent = questionContent;
     }
 
-    public Set<Answer> getAnswers() {
+    public Set<AnswerEntity> getAnswers() {
         return answers;
     }
 
-    public void setAnswers(Set<Answer> answers) {
+    public void setAnswers(Set<AnswerEntity> answers) {
         this.answers = answers;
     }
 }

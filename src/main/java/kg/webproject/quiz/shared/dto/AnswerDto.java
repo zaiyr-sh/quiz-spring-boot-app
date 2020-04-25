@@ -1,16 +1,19 @@
-package kg.webproject.quiz.ui.models.response;
+package kg.webproject.quiz.shared.dto;
 
-public class AnswerResponseModel {
+import java.io.Serializable;
 
-    private String Id;
+public class AnswerDto {
+
+    private long Id;
     private String answerContent;
     private boolean correct;
+    private QuestionDto question;
 
-    public String getId() {
+    public long getId() {
         return Id;
     }
 
-    public void setId(String id) {
+    public void setId(long id) {
         this.Id = id;
     }
 
@@ -28,5 +31,13 @@ public class AnswerResponseModel {
 
     public void setCorrect(boolean correct) {
         this.correct = correct;
+    }
+
+    public QuestionDto getQuestion() {
+        return question;
+    }
+
+    public void setQuestion(QuestionDto question) {
+        this.question = question;
     }
 }

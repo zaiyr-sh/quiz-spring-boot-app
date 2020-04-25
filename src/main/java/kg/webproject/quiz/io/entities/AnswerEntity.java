@@ -4,8 +4,8 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity(name = "answers")
-public class Answer implements Serializable {
-    private static final long serialVersionUID = 3599305611574853751L;
+public class AnswerEntity implements Serializable {
+    private static final long serialVersionUID = 5512315223586710044L;
 
     @Id
     @GeneratedValue
@@ -19,7 +19,7 @@ public class Answer implements Serializable {
 
     @ManyToOne
     @JoinColumn(name="questions_id")
-    private Question question;
+    private QuestionEntity question;
 
     public long getId() {
         return id;
@@ -45,11 +45,11 @@ public class Answer implements Serializable {
         this.correct = correct;
     }
 
-    public Question getQuestion() {
+    public QuestionEntity getQuestion() {
         return question;
     }
 
-    public void setQuestion(Question question) {
+    public void setQuestion(QuestionEntity question) {
         this.question = question;
     }
 }
