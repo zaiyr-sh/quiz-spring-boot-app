@@ -15,7 +15,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @RestController
-@RequestMapping("questions")
+@RequestMapping("questions") // http:localhost:8080/questions
 public class QuestionController {
 
     @Autowired
@@ -27,7 +27,6 @@ public class QuestionController {
     @PostMapping
     @ApiOperation(value = "addQuestion")
     public QuestionResponseModel addQuestion(@RequestBody QuestionRequestModel question){
-
         QuestionDto questionDto = modelMapper.map(question, QuestionDto.class);
 
         return modelMapper.map(questionService.createQuestion(questionDto), QuestionResponseModel.class);
