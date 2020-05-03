@@ -25,8 +25,8 @@ public class QuestionController {
 
     @CrossOrigin
     @PostMapping
-    @ApiOperation(value = "addQuestion")
-    public QuestionResponseModel addQuestion(@RequestBody QuestionRequestModel question){
+    @ApiOperation(value = "createQuestion")
+    public QuestionResponseModel createQuestion(@RequestBody QuestionRequestModel question){
         QuestionDto questionDto = modelMapper.map(question, QuestionDto.class);
 
         return modelMapper.map(questionService.createQuestion(questionDto), QuestionResponseModel.class);
@@ -35,8 +35,8 @@ public class QuestionController {
 
     @CrossOrigin
     @GetMapping(path = "/{id}")
-    @ApiOperation(value = "getQuestion")
-    public QuestionResponseModel getQuestion(@PathVariable long id){
+    @ApiOperation(value = "getQuestionById")
+    public QuestionResponseModel getQuestionById(@PathVariable long id){
         return modelMapper.map(questionService.getQuestionById(id), QuestionResponseModel.class);
     }
 
@@ -55,11 +55,11 @@ public class QuestionController {
 
     @CrossOrigin
     @DeleteMapping(path = "/{id}")
-    @ApiOperation(value = "deleteQuestion")
-    public String deleteQuestion(@PathVariable long id){
+    @ApiOperation(value = "deleteQuestionById")
+    public String deleteQuestionById(@PathVariable long id){
 
-        questionService.deleteQuestion(id);
-        return "Operation successful";
+        questionService.deleteQuestionById(id);
+        return "Question was successfully deleted";
 
     }
 
@@ -70,9 +70,19 @@ public class QuestionController {
 
         AnswerDto answerToAdd = modelMapper.map(answer, AnswerDto.class);
 
-        return modelMapper.map(questionService.addAnswer(answerToAdd, id), QuestionResponseModel.class);
+        return modelMapper.map(questionService.updateAnswer(answerToAdd, id), QuestionResponseModel.class);
 
     }
+
+//    @CrossOrigin
+//    @PutMapping(path = "/{id}")
+//    @ApiOperation(value = "updateQuestion")
+//    public QuestionResponseModel updateQuestion(@PathVariable long id, @RequestBody QuestionRequestModel question){
+//
+//        QuestionDto questionToAdd = modelMapper.map(question, QuestionDto.class);
+//
+//        return modelMapper.map(questionService.updateQuestion(questionToAdd, id), QuestionResponseModel.class);
+//    }
 
 
 }
