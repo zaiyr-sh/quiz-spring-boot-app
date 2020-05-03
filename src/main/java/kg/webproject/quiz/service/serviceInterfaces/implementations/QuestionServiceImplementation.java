@@ -46,20 +46,20 @@ public class QuestionServiceImplementation implements QuestionService {
     }
 
     @Override
-    public String deleteQuestion(long id) {
+    public String deleteQuestionById(long id) {
         _questionRepository.deleteById(id);
 
         return "Operation successful";
     }
 
-    @Override
-    public QuestionDto updateQuestion(long Id, QuestionDto question) {
-        return null;
+//    @Override
+//    public QuestionDto updateQuestion(long Id, QuestionDto question) {
+//        return null;
 //        QuestionDto questionUpdate = modelMapper.map(question, QuestionDto.class);
 //
 //        return modelMapper.map(_questionRepository.findByQuestionContent(
 //                questionUpdate, Id), QuestionResponseModel.class);
-    }
+//    }
 
     @Override
     public Set<QuestionDto> getAllQuestions() {
@@ -72,7 +72,7 @@ public class QuestionServiceImplementation implements QuestionService {
     }
 
     @Override
-    public QuestionDto addAnswer(AnswerDto answer, long id) {
+    public QuestionDto updateAnswer(AnswerDto answer, long id) {
         QuestionEntity question = _questionRepository.findById(id);
         QuestionDto questionDto = modelMapper.map(question, QuestionDto.class);
         questionDto.getAnswers().add(answer);

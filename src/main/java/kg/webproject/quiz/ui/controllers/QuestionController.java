@@ -26,7 +26,7 @@ public class QuestionController {
     @CrossOrigin
     @PostMapping
     @ApiOperation(value = "addQuestion")
-    public QuestionResponseModel addQuestion(@RequestBody QuestionRequestModel question){
+    public QuestionResponseModel createQuestion(@RequestBody QuestionRequestModel question){
         QuestionDto questionDto = modelMapper.map(question, QuestionDto.class);
 
         return modelMapper.map(questionService.createQuestion(questionDto), QuestionResponseModel.class);
@@ -36,7 +36,7 @@ public class QuestionController {
     @CrossOrigin
     @GetMapping(path = "/{id}")
     @ApiOperation(value = "getQuestion")
-    public QuestionResponseModel getQuestion(@PathVariable long id){
+    public QuestionResponseModel getQuestionById(@PathVariable long id){
         return modelMapper.map(questionService.getQuestionById(id), QuestionResponseModel.class);
     }
 
@@ -56,21 +56,21 @@ public class QuestionController {
     @CrossOrigin
     @DeleteMapping(path = "/{id}")
     @ApiOperation(value = "deleteQuestion")
-    public String deleteQuestion(@PathVariable long id){
+    public String deleteQuestionById(@PathVariable long id){
 
-        questionService.deleteQuestion(id);
+        questionService.deleteQuestionById(id);
         return "Operation successful";
 
     }
 
     @CrossOrigin
     @PutMapping(path = "/{id}")
-    @ApiOperation(value = "addAnswerToQuestion")
-    public QuestionResponseModel addAnswerToQuestion(@PathVariable long id, @RequestBody AnswerRequestModel answer){
+    @ApiOperation(value = "updateAnswer")
+    public QuestionResponseModel updateAnswer(@PathVariable long id, @RequestBody AnswerRequestModel answer){
 
         AnswerDto answerToAdd = modelMapper.map(answer, AnswerDto.class);
 
-        return modelMapper.map(questionService.addAnswer(answerToAdd, id), QuestionResponseModel.class);
+        return modelMapper.map(questionService.updateAnswer(answerToAdd, id), QuestionResponseModel.class);
 
     }
 
