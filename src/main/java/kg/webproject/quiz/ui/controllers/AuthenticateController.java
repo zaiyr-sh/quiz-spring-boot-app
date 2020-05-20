@@ -1,5 +1,6 @@
 package kg.webproject.quiz.ui.controllers;
 
+import io.swagger.annotations.ApiOperation;
 import kg.webproject.quiz.service.serviceInterfaces.MyUserDetailsService;
 import kg.webproject.quiz.ui.models.request.AuthenticationRequest;
 import kg.webproject.quiz.ui.models.response.AuthenticationResponse;
@@ -27,6 +28,7 @@ class AuthenticateController {
 	@Autowired
 	private MyUserDetailsService userDetailsService;
 
+	@ApiOperation(value = "authentication")
 	@RequestMapping(value = "/authenticate", method = RequestMethod.POST)
 	public ResponseEntity<?> createAuthenticationToken(@RequestBody AuthenticationRequest authenticationRequest) throws Exception {
 
