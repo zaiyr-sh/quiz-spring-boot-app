@@ -89,15 +89,4 @@ public class QuestionServiceImplementation implements QuestionService {
         return modelMapper.map(returnQuestion, QuestionDto.class);
     }
 
-//    @Override
-//    public QuestionDto updateQuestion(QuestionDto question, long id) {
-//        QuestionEntity questionEntity = _questionRepository.findById(id);
-//        QuestionDto questionDto = modelMapper.map(questionEntity, QuestionDto.class);
-//        questionDto.setQuestionContent(question.getQuestionContent());
-//        QuestionEntity returnQuestion = _questionRepository.save(modelMapper.map(questionDto, QuestionEntity.class));
-//        return modelMapper.map(returnQuestion, QuestionDto.class);
-////        return null;
-//    }
-
-
 }

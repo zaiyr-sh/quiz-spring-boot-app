@@ -12,6 +12,5 @@ public interface QuestionService {
     Set<QuestionDto> getAllQuestions();
     QuestionDto getQuestionById(long id);
     QuestionDto updateAnswer(AnswerDto answerDto, long id);
-//    QuestionDto updateQuestion(QuestionDto questionDto, long id);
     String deleteQuestionById(long id);
 }
