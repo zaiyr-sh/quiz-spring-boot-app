@@ -21,7 +21,7 @@ Expected outcomes | To understand the Java Spring Boot Framework and how to make
 Proposed activities | Presentation in Zoom
 Estimative budget | Free budget
 Proposed partners | Nobody
-Git repository link | https://github.com/zaiyr00/quiz-spring-boot-app
+Git repository link | Backend (https://github.com/zaiyr00/quiz-spring-boot-app) Frontend (https://github.com/zaiyr00/quiz-react-js-app)
 
 # Software Features List  :
 1.	Data storage (Files, Databases)
@@ -49,7 +49,7 @@ Git repository link | https://github.com/zaiyr00/quiz-spring-boot-app
 
 * [MySQL](https://www.mysql.com/) - data storage solution
 
-* [React JS](https://reactjs.org/) - a JavaScript library for building user interfaces
+* [React JS](https://reactjs.org/) - a JavaScript library for building user interfaces  
 
 # Purpose
 
