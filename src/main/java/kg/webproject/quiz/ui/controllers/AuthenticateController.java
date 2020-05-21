@@ -29,7 +29,7 @@ class AuthenticateController {
 	private MyUserDetailsService userDetailsService;
 
 	@ApiOperation(value = "authentication")
-	@RequestMapping(value = "/authenticate", method = RequestMethod.POST)
+	@RequestMapping(value = "/authenticate", method = RequestMethod.POST) 	// http:localhost:8080/authenticate
 	public ResponseEntity<?> createAuthenticationToken(@RequestBody AuthenticationRequest authenticationRequest) throws Exception {
 
 		try {
