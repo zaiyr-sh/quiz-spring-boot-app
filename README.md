@@ -45,7 +45,7 @@ Git repository link | Backend (https://github.com/zaiyr00/quiz-spring-boot-app) 
 
 * [Java](https://go.java/) - widely used object-oriented language, the core of our system
 
-* [JavaFX](http://docs.oracle.com/javafx/2/overview/jfxpub-overview.htm) - an open source Java-based framework used to create a micro Service.
+* [Java Spring Boot](https://spring.io/) - an open source Java-based framework used to create a micro Service.
 
 * [MySQL](https://www.mysql.com/) - data storage solution
 
