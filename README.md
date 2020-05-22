@@ -17,7 +17,7 @@ Topic addressed by the project | A classic quiz web application where the user w
 Background | This application has everything is needed for a full understanding of the Spring Boot framework and how to use it with React JS Framework that I used for Frontend part.
 Aim of the project (what) | The aim is to create some kind of educational program that will help people test their knowledge
 Objectives of the project (why) | This is an International Ala-Too University project marking the end of the studying Backend. It's purpose is to build a system that uses Java Spring Boot Framework, is connected to a PostgreSQL database and has a nice user interface built in React JS Framework.
-Expected outcomes | To understand the Java Spring Boot Framework and how to make a OneToMany, ManyToOne and ManyToMany relationships there
+Expected outcomes | To understand the Java Spring Boot Framework, how to make a OneToMany, ManyToOne and ManyToMany relationships there and Authentication 
 Proposed activities | Presentation in Zoom
 Estimative budget | Free budget
 Proposed partners | Nobody
